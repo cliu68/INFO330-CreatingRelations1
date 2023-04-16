@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/sophieliu/Documents/INFO330/INFO330-CreatingRelations1/test.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="900"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:maincourses"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="courses" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="62"/><column index="2" value="186"/><column index="3" value="72"/><column index="4" value="70"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="student.sql">create table students (
+
+id integer primary key,
+firstname varchar(40),
+lastname varchar(80),
+age numeric
+);
+
+insert into students (id, firstname, lastname, age)
+values (1, 'Fred', 'Flintstone', 35),
+(2, 'Wilma', 'Flintstone', 29),
+(3, 'Barney', 'Rubble', 33),
+(4, 'Betty', 'Rubble', 29),
+(5, 'Pebble', 'Flintstone', 1),
+(6, 'Bam-Bam', 'Rubble', 1),
+(7, 'Sophie', 'Lau', 21),
+(8, 'Bob', 'Sponge', 7),
+(9, 'Stella', 'Lou', 5),
+(10, 'Cindy', 'Garfield', 32);
+
+
+				</sql><sql name="courses.sql">CREATE TABLE courses 
+(
+  code VARCHAR(40) NOT NULL,
+  description VARCHAR(400),
+  start DATE NOT NULL,
+  end DATE NOT NULL,
+  PRIMARY KEY (code),
+  CHECK (LENGTH(code) &gt;= 7)
+);
+
+
+INSERT INTO courses (code, start, end, description)
+VALUES 
+  ('INFO330A', '2023-04-01', '2023-06-01', 'Data and databases'),
+  ('INFO314', '2023-04-01', '2023-06-01', 'Networking and distributed Systems'),
+  ('INFO448A', '2023-09-25', '2023-12-19', 'Introduction to iOS'),
+  ('INFO449A', '2023-09-25', '2023-12-19', 'Introduction to Android'),
+  ('BAW010', '2023-04-01', '2023-06-01', 'Introduction to Basket-Weaving'),
+  ('BAW100A', '2023-04-01', '2023-06-01', 'Underwater Basket-Weaving');
+
+
+
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
